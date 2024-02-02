@@ -1,0 +1,29 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="post">
+	
+	<div class="wrap">
+		
+		<h1 class="hug">{{ title }}</h1>
+		
+		<div class="post-content">
+			
+			{{ content | safe }}
+			
+		</div>
+		
+		<p class="post-date">Posted on {{ date | dateDisplay }}</p>
+		
+		<p class="hug categories">
+		{% for category in categories %}
+			<span>#{{ category }}</span>
+		{% endfor %}
+		</p>
+		
+	</div>
+	
+	
+	
+</div>

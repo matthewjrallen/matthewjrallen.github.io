@@ -1,0 +1,19 @@
+---
+layout: "layouts/base.njk"
+---
+
+{{ content | safe }}
+
+<ul id="entries">
+
+	{% for post in collections.posts | reverse %}
+		
+		{% if post.data.public %}
+			
+			{% include 'partials/entry.njk' %}
+			
+		{% endif %}
+		
+	{% endfor %}
+
+</ul>

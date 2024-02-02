@@ -1,0 +1,14 @@
+.categories {
+	span {
+		margin: 10px 5px;
+		font-size: 60%;
+		line-height: 60%;
+		background-color: var(--primary-color);
+		padding: 5px 10px;
+		border-radius: 20px;
+		
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+<li class="entry">
+	
+	<a href="{{ post.url }}">
+		
+		<h2 class="hug">{{ post.data.date | dateDisplay }} - {{ post.data.title }}</h2>
+		
+	</a>
+	
+	<p class="hug">{{ post.data.excerpt }}</p>
+	
+	<p class="hug categories">
+	{% for category in post.data.categories %}
+		<span>#{{ category }}</span>
+	{% endfor %}
+	</p>
+	
+</li>
