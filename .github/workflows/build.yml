@@ -18,8 +18,7 @@ jobs:
 
       - name: Install dependencies & build
         run: |
-          npm ci
-          npm run build
+          eleventy
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.8.0
         with:
