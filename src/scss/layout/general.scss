@@ -40,7 +40,7 @@ body {
 	&.light-theme {
 		#footer {
 			#theme-toggle {
-				background-image: url(../images/light.svg);
+				background-image: url(../images/icon/light.svg);
 			}
 		}
 	}
@@ -48,7 +48,7 @@ body {
 	&.dark-theme {
 		#footer {
 			#theme-toggle {
-				background-image: url(../images/dark.svg);
+				background-image: url(../images/icon/dark.svg);
 			}
 		}
 		
@@ -175,6 +175,10 @@ body {
 				a {
 					svg {
 						height: 20px;
+
+						path {
+							fill: var(--text-color);
+						}
 					}
 				}
 			}

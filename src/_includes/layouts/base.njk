@@ -45,7 +45,7 @@
 				
 				<a href="/" id="site-title">
 					
-					{{ '/src/images/logo.svg' | svgContents | safe }}
+					{{ '/src/images/logo/matthewjrallen.svg' | svgContents | safe }}
 					
 				</a>
 				
@@ -85,9 +85,25 @@
 				
 				<ul class="links">
 					
-					<li><a href="https://mstdn.social/@matt_allen" title="Mastodon" target="_blank" rel="me" class="gtm--footer-mastodon"><i class="fa-brands fa-mastodon"></i></a></li>
+					<li>
 					
-					<li><a href="https://twitter.com/matt12allen" title="Twitter" target="_blank" class="gtm--footer-twitter"><i class="fa-brands fa-twitter"></i></a></li>
+						<a href="https://mstdn.social/@matt_allen" title="Mastodon" target="_blank" rel="me" class="gtm--footer-mastodon">
+
+							{{ '/src/images/icon/mastodon.svg' | svgContents | safe }}
+						
+						</a>
+						
+					</li>
+					
+					<li>
+					
+						<a href="https://twitter.com/matt12allen" title="X" target="_blank" class="gtm--footer-twitter">
+
+							{{ '/src/images/icon/x.svg' | svgContents | safe }}
+					
+						</a>
+						
+					</li>
 					
 				</ul>
 				
