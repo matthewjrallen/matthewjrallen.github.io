@@ -1,3 +1,5 @@
+const { DateTime } = require("luxon");
+
 module.exports = function(eleventyConfig) {
 	
 	eleventyConfig.addLayoutAlias("posts", "layouts/post.njk");
@@ -11,9 +13,11 @@ module.exports = function(eleventyConfig) {
 	};
 	
 	eleventyConfig.setLibrary("md", markdownIt(options));
-	
-	// Add filter
-	eleventyConfig.addFilter("dateDisplay", require("./src/_filters/dates.js") );
+
+	//Date
+	eleventyConfig.addFilter("postDate", (dateObj) => {
+		return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+	  });
 	
 	// SVG
 	svgContents = require("eleventy-plugin-svg-contents");

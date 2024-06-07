@@ -3,9 +3,10 @@ title: Content coming soon
 date: 2021-09-19
 categories:
   - placeholder
-public: False
+public: True
 icon: 🎈
 excerpt: I learned how to use Eleventy to build my own bragdoc!
+image: work-1/test.png
 ---
 
 I learned how to use Eleventy to build my own bragdoc!
