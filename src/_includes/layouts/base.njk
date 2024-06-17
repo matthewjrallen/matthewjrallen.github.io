@@ -1,132 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
-	<head>
-		
-		<!-- Google Tag Manager -->
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-KN569MF');</script>
-		<!-- End Google Tag Manager -->
-
-		<title>{{ title }}</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,400;0,700;1,400&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-		
-		<link rel="stylesheet" href="{{ '/css/main.css' | url }}">
-		
-		<link rel="apple-touch-icon" sizes="180x180" href="{{ '/favicons/apple-touch-icon.png' | url }}">
-		<link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicons/favicon-32x32.png' | url }}">
-		<link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicons/favicon-16x16.png' | url }}">
-		<link rel="manifest" href="{{ '/favicons/site.webmanifest' | url }}">
-		<link rel="mask-icon" href="{{ '/favicons/safari-pinned-tab.svg' | url }}" color="#7ecef4">
-		<meta name="msapplication-TileColor" content="#7ecef4">
-		<meta name="theme-color" content="#eeeeee" media="(prefers-color-scheme: light)">
-		<meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
-		
-	</head>
-	
-	<body>
-	
-		<!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KN569MF"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-		<!-- End Google Tag Manager (noscript) -->
-		
-		<div id="page-wrap">
-			
-			<header id="header">
-				
-				<a href="/" id="site-title">
-					
-					{{ '/src/images/logo/matthewjrallen.svg' | svgContents | safe }}
-					
-				</a>
-				
-				<nav id="main-nav">
-					
-					<ul>
-						
-						<li>
-							
-							<a href="/about.html" title="About" class="gtm--main-nav-about">About</a>
-							
-						</li>
-						
-						<li>
-							
-							<a href="/contact.html" title="Contact" class="btn gtm--main-nav-contact">Contact</a>
-							
-						</li>
-						
-					</ul>
-					
-				</nav>
-				
-			</header>
-			
-			<div id="page-content-wrap">
-				
-				<div id="page-content">
-					
-					{{ content | safe }}
-					
-				</div>
-				
-			</div>
-			
-			<footer id="footer">
-				
-				<ul class="links">
-					
-					<li>
-					
-						<a href="https://www.threads.net/@matthewjrallen" title="Threads" target="_blank" rel="me" class="gtm--footer-threads">
-
-							{{ '/src/images/logo/threads.svg' | svgContents | safe }}
-						
-						</a>
-						
-					</li>
-					
-					<li>
-					
-						<a href="https://x.com/matthewjrallen" title="X" target="_blank" class="gtm--footer-twitter">
-
-							{{ '/src/images/logo/x.svg' | svgContents | safe }}
-					
-						</a>
-						
-					</li>
-
-					<li>
-					
-						<a href="https://mstdn.social/@matt_allen" title="Mastodon" target="_blank" rel="me" class="gtm--footer-mastodon">
-
-							{{ '/src/images/logo/mastodon.svg' | svgContents | safe }}
-						
-						</a>
-						
-					</li>
-					
-				</ul>
-				
-				<a href="#" title="Activate light/dark mode" id="theme-toggle"></a>
-				
-			</footer>
-			
-		</div>
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="https://kit.fontawesome.com/cc6e12dac5.js" crossorigin="anonymous"></script>
-		<script defer type="text/javascript" src="{{ '/js/scripts.js' | url }}"></script>
-		
-	</body>
-	
+    <head>
+        <!-- Google Tag Manager -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer'
+                        ? '&l=' + l
+                        : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-KN569MF');
+        </script>
+        <!-- End Google Tag Manager -->
+        <title>{{ title }}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,400;0,700;1,400&family=Ubuntu:wght@700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ '/favicons/apple-touch-icon.png' | url }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicons/favicon-32x32.png' | url }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicons/favicon-16x16.png' | url }}">
+        <link rel="manifest" href="{{ '/favicons/site.webmanifest' | url }}">
+        <link rel="mask-icon" href="{{ '/favicons/safari-pinned-tab.svg' | url }}" color="#7ecef4">
+        <meta name="msapplication-TileColor" content="#7ecef4">
+        <meta name="theme-color" content="#eeeeee" media="(prefers-color-scheme: light)">
+        <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-KN569MF"
+                height="0"
+                width="0"
+                style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <div id="page-wrap">
+            <header id="header">
+                <a href="/" id="site-title">
+                    {{ '/src/images/logo/matthewjrallen.svg' | svgContents | safe }}
+                </a>
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="/about.html" title="About" class="gtm--main-nav-about">About</a></li>
+                        <li><a href="/uses.html" title="My Web Development Setup" class="gtm--main-nav-uses">Uses</a></li>
+                        <li><a href="/contact.html" title="Contact" class="btn gtm--main-nav-contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="page-content-wrap">
+                <div id="page-content">
+                    {{ content | safe }}
+                </div>
+            </div>
+            <footer id="footer">
+                <ul class="links">
+                    <li>
+                        <a href="https://www.threads.net/@matthewjrallen" title="Threads" target="_blank" rel="me" class="gtm--footer-threads">
+                            {{ '/src/images/logo/threads.svg' | svgContents | safe }}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/matthewjrallen" title="X" target="_blank" class="gtm--footer-twitter">
+                            {{ '/src/images/logo/x.svg' | svgContents | safe }}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://mstdn.social/@matt_allen" title="Mastodon" target="_blank" rel="me" class="gtm--footer-mastodon">
+                            {{ '/src/images/logo/mastodon.svg' | svgContents | safe }}
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" title="Activate light/dark mode" id="theme-toggle"></a>
+            </footer>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/cc6e12dac5.js" crossorigin="anonymous"></script>
+        <script defer type="text/javascript" src="{{ '/js/scripts.js' | url }}"></script>
+    </body>
 </html>
