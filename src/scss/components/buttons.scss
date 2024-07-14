@@ -4,6 +4,17 @@
 	display: inline-block;
 	padding: 10px 20px;
 	transition: .2s ease-in-out;
+
+	&:link,
+	&:active,
+	&:visited {
+		color: var(--text-color);
+		text-decoration: none;
+	}
+
+	&:focus {
+		color: var(--text-color);
+	}
 	
 	&:hover {
 		background-color: var(--text-color);

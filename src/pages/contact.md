@@ -5,4 +5,6 @@ date: 2021-09-19
 layout: layouts/contact.njk
 ---
 
-A proper method of contact will be coming soon. For now please contact me on twitter <a href="https://twitter.com/matt12allen" title="Contact me on twitter" target="_blank" class="gtm--contact-twitter">@matt12allen</a>
+Please use the form bellow to send me a message.
+
+<a href="https://forms.gle/dYhV4JzMBVNmjjDN6" target="_blank" rel="noopener noreferrer" class="btn">Send me a mesaage</a>
