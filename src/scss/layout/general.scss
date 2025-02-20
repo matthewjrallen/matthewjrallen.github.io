@@ -2,11 +2,11 @@
 	--text-color: #222;
 	--bg-color: #eee;
 	--bg-color-darker: #e4e4e4;
-	--primary-color: #7ECEF4;
-	--secondary-color: #1D2088;
+	--primary-color: #7ecef4;
+	--secondary-color: #1d2088;
 	--gutter: 40px;
 	--gutter-half: 20px;
-	
+
 	.dark-theme {
 		--text-color: #eee;
 		--bg-color: #121212;
@@ -15,12 +15,11 @@
 }
 
 @media (prefers-color-scheme: dark) {
-	
-	body { 
+	body {
 		--text-color: #eee;
 		--bg-color: #121212;
 		--bg-color-darker: #1c1c1c;
-		
+
 		&.light-theme {
 			--text-color: #222;
 			--bg-color: #eee;
@@ -36,7 +35,7 @@ html {
 body {
 	background-color: var(--bg-color);
 	color: var(--text-color);
-	
+
 	&.light-theme {
 		#footer {
 			#theme-toggle {
@@ -44,18 +43,18 @@ body {
 			}
 		}
 	}
-	
+
 	&.dark-theme {
 		#footer {
 			#theme-toggle {
 				background-image: url(../images/icon/dark.svg);
 			}
 		}
-		
+
 		img {
-			opacity: .75;
-			transition: opacity .5s ease-in-out;
-			
+			opacity: 0.75;
+			transition: opacity 0.5s ease-in-out;
+
 			&:hover {
 				opacity: 1;
 			}
@@ -72,7 +71,11 @@ body {
 	height: 100vh;
 	height: var(--app-height);
 	position: relative;
-	
+
+	@include media(700px) {
+		border-top: 120px solid var(--bg-color);
+	}
+
 	#page-content-wrap {
 		height: 100%;
 		background-color: var(--bg-color-darker);
@@ -82,14 +85,14 @@ body {
 		overflow-x: none;
 		overflow-y: auto;
 		padding: var(--gutter);
-		
+
 		#page-content {
 			width: 100%;
 			max-width: 1200px;
 			margin: 0 auto;
 		}
 	}
-	
+
 	#header {
 		position: absolute;
 		top: -60px;
@@ -100,15 +103,31 @@ body {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		
+		flex-wrap: wrap;
+
+		@include media(700px) {
+			height: 120px;
+			top: -120px;
+		}
+
 		#site-title {
 			padding-right: 10px;
-			
+
+			@include media(700px) {
+				padding-right: 0;
+				width: 100%;
+				padding: 10px 0;
+			}
+
 			svg {
 				display: block;
 				height: 30px;
 				width: auto;
-				
+
+				@include media(700px) {
+					margin: 0 auto;
+				}
+
 				path {
 					&.text {
 						fill: var(--text-color);
@@ -116,30 +135,36 @@ body {
 				}
 			}
 		}
-		
+
 		#main-nav {
+			@include media(700px) {
+				width: 100%;
+				text-align: center;
+				padding: 10px 0;
+			}
+
 			ul {
 				list-style-type: none;
 				margin: 0;
 				padding: 0;
-				
+
 				li {
 					display: inline-block;
 					font-size: 80%;
 					line-height: 80%;
 					padding: 0 10px;
-					
+
 					&:last-child {
 						padding-right: 0;
 					}
-					
+
 					a {
 						&:link,
 						&:active,
 						&:visited {
 							text-decoration: none;
 						}
-						
+
 						&.btn {
 							padding: 10px;
 						}
@@ -148,7 +173,7 @@ body {
 			}
 		}
 	}
-	
+
 	#footer {
 		position: absolute;
 		bottom: -40px;
@@ -159,20 +184,20 @@ body {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		
+
 		.links {
 			list-style-type: none;
 			margin: 0;
 			padding: 0;
-			
+
 			li {
 				display: inline-block;
 				margin-right: 6px;
-				
+
 				&:last-child {
 					margin-right: 0;
 				}
-				
+
 				a {
 					svg {
 						height: 20px;
@@ -184,7 +209,7 @@ body {
 				}
 			}
 		}
-		
+
 		#theme-toggle {
 			display: block;
 			height: 20px;
@@ -192,7 +217,7 @@ body {
 			background-size: 20px;
 			background-position: center;
 			background-repeat: no-repeat;
-			transition: .2s ease-in-out;
+			transition: 0.2s ease-in-out;
 		}
 	}
 }
