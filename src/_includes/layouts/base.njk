@@ -21,21 +21,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,400;0,700;1,400&family=Ubuntu:wght@700&display=swap"
-            rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ '/favicons/apple-touch-icon.png' | url }}">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicons/favicon-32x32.png' | url }}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicons/favicon-16x16.png' | url }}">
-        <link rel="manifest" href="{{ '/favicons/site.webmanifest' | url }}">
-        <link rel="mask-icon" href="{{ '/favicons/safari-pinned-tab.svg' | url }}" color="#7ecef4">
-        <meta name="msapplication-TileColor" content="#7ecef4">
-        <meta name="theme-color" content="#eeeeee" media="(prefers-color-scheme: light)">
-        <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
     </head>
     <body>
+
         <!-- Google Tag Manager (noscript) -->
         <noscript>
             <iframe
@@ -45,48 +36,56 @@
                 style="display:none;visibility:hidden"></iframe>
         </noscript>
         <!-- End Google Tag Manager (noscript) -->
-        <div id="page-wrap">
-            <header id="header">
-                <a href="/" id="site-title">
-                    {{ '/src/images/logo/matthewjrallen.svg' | svgContents | safe }}
-                </a>
-                <nav id="main-nav">
-                    <ul>
-                        <li><a href="/about.html" title="About">About</a></li>
-                        <li><a href="/work.html" title="My Work">Work</a></li>
-                        <li><a href="/uses.html" title="My Web Development Setup">Uses</a></li>
-                        <li><a href="/contact.html" title="Contact" class="btn">Contact</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <div id="page-content-wrap">
-                <div id="page-content">
-                    {{ content | safe }}
-                </div>
-            </div>
-            <footer id="footer">
-                <ul class="links">
-					<li>
-                        <a href="https://bsky.app/profile/matthewallen.me" title="Bluesky" target="_blank" rel="me" class="gtm--footer-bluesky">
-                            {{ '/src/images/logo/bluesky.svg' | svgContents | safe }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.threads.net/@matthewjrallen" title="Threads" target="_blank" rel="me" class="gtm--footer-threads">
-                            {{ '/src/images/logo/threads.svg' | svgContents | safe }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://mstdn.social/@matt_allen" title="Mastodon" target="_blank" rel="me" class="gtm--footer-mastodon">
-                            {{ '/src/images/logo/mastodon.svg' | svgContents | safe }}
-                        </a>
-                    </li>
-                </ul>
-                <a href="#" title="Activate light/dark mode" id="theme-toggle"></a>
-            </footer>
-        </div>
+
+        <header class="header">
+
+			<a href="/" class="nav-logo" title="Home">MA</a>
+
+			<nav class="main-nav">
+
+				<ul>
+
+					<li><a href="/about.html" title="About">About</a></li>
+
+					<li><a href="/projects.html" title="My Projects">Projects</a></li>
+
+					<li><a href="/uses.html" title="My Web Development Setup">Uses</a></li>
+
+					<li><a href="/contact.html" title="Contact" class="btn">Contact</a></li>
+
+				</ul>
+
+			</nav>
+
+			<button class="theme-toggle" aria-label="Toggle theme" onclick="toggleTheme()">
+
+     			<span class="theme-icon">◐</span>
+    
+			</button>
+
+		</header>
+
+		<main>
+
+			{{ content | safe }}
+
+		</main>
+
+		<footer class="footer">
+
+			<span class="mono">© 2026 Matthew Allen</span>
+
+			<div class="footer-links">
+
+				<a href="https://github.com/matthewjrallen" target="_blank">GitHub</a>
+
+				<a href="https://www.linkedin.com/in/matthewjrallen/" target="_blank">LinkedIn</a>
+
+			</div>
+			
+		</footer>
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://kit.fontawesome.com/cc6e12dac5.js" crossorigin="anonymous"></script>
         <script defer type="text/javascript" src="{{ '/js/scripts.js' | url }}"></script>
     </body>
 </html>

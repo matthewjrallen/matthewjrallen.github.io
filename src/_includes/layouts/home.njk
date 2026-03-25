@@ -2,7 +2,33 @@
 layout: "layouts/base.njk"
 ---
 
-{{ content | safe }}
+<section class="hero">
+
+	<div class="section-label"><span class="mono">01 /</span> Introduction</div>
+
+	<h1 class="hero-title">Matthew<br/><em>Allen</em></h1>
+
+	<div class="hero-right">
+		
+		<div class="hero-desc">
+
+			{{ content | safe }}
+
+		</div>
+		
+		<div class="hero-actions">
+
+			<a href="projects.html" class="btn-primary">View Projects</a>
+
+			<a href="contact.html" class="btn-ghost">Get in Touch</a>
+
+		</div>
+
+	</div>
+
+</section>
+
+<div class="divider"></div>
 
 <ul id="entries">
 

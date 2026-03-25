@@ -1,0 +1,41 @@
+/* ─── Tokens ────────────────────────────────────── */
+:root {
+	--font-serif: "DM Serif Display", Georgia, serif;
+	--font-sans: "DM Sans", sans-serif;
+	--font-mono: "DM Mono", monospace;
+
+	--radius: 3px;
+	--nav-h: 64px;
+	--max-w: 1100px;
+
+	--transition: 0.2s ease;
+	--transition-slow: 0.4s ease;
+}
+
+/* ─── Light Theme (cream/khaki/yellow) ──────────── */
+[data-theme="light"] {
+	--bg: #f5f0e8;
+	--bg-alt: #ede8dc;
+	--surface: #e8e2d4;
+	--border: #d4ccba;
+	--text: #1a1813;
+	--text-muted: #6b6454;
+	--accent: #c8a800;
+	--accent-dim: #e8c800;
+	--accent-bg: #fff8d0;
+	--nav-bg: rgba(245, 240, 232, 0.92);
+}
+
+/* ─── Dark Theme ────────────────────────────────── */
+[data-theme="dark"] {
+	--bg: #0f0f0d;
+	--bg-alt: #161612;
+	--surface: #1e1e1a;
+	--border: #2e2e28;
+	--text: #f0ede6;
+	--text-muted: #8a8578;
+	--accent: #d4b000;
+	--accent-dim: #a88900;
+	--accent-bg: #1e1a00;
+	--nav-bg: rgba(15, 15, 13, 0.92);
+}

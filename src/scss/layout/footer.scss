@@ -1,0 +1,30 @@
+.footer {
+	max-width: var(--max-w);
+	margin: 0 auto;
+	padding: 24px 40px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-top: 1px solid var(--border);
+	font-size: 0.78rem;
+	color: var(--text-muted);
+
+	.footer-links {
+		display: flex;
+		gap: 24px;
+
+		a {
+			font-family: var(--font-mono);
+			font-size: 0.72rem;
+			letter-spacing: 0.06em;
+			text-transform: uppercase;
+			color: var(--text-muted);
+			transition: color var(--transition);
+
+			&:hover {
+				color: var(--accent);
+			}
+		}
+	}
+}
