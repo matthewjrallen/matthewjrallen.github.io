@@ -1,0 +1,45 @@
+.content-section {
+	.content {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5 {
+			font-family: var(--font-serif);
+			font-size: 1.25rem;
+			font-weight: 400;
+			color: var(--text);
+		}
+
+		h2,
+		h3,
+		h4,
+		h5,
+		p,
+		ul {
+			margin-top: 1.5rem;
+		}
+
+		ul {
+			list-style: none;
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+
+			li {
+				font-family: var(--font-mono);
+				font-size: 0.82rem;
+				color: var(--text-muted);
+				padding-left: 14px;
+				position: relative;
+
+				&::before {
+					content: "—";
+					position: absolute;
+					left: 0;
+					color: var(--accent);
+				}
+			}
+		}
+	}
+}

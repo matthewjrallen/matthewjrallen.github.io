@@ -83,17 +83,21 @@ layout: "layouts/base.njk"
 
 <div class="divider"></div>
 
-<section class="projects-section">
+<section class="selected-section">
 
     <div class="section-label"><span class="mono">03 /</span> Selected Projects</div>
 
-    <div class="projects-grid">
+    <div class="selected-grid">
 
 		{% for post in collections.projects | reverse %}
 			
 			{% if post.data.public %}
+
+				{% if post.data.featured %}
 				
-				{% include 'partials/entry.njk' %}
+					{% include 'partials/selected.njk' %}
+
+				{% endif %}
 				
 			{% endif %}
 			

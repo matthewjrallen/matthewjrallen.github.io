@@ -1,0 +1,45 @@
+<article class="project-row">
+
+	<div class="project-index mono">{% if projectIndex < 10 %}0{% endif %}{{ projectIndex }}</div>
+
+	<div class="project-content">
+		
+		<div class="project-header">
+			
+			<h2>{{ post.data.title }}</h2>
+
+			<div class="project-links">
+
+				{% if post.data.link_live %}
+				<a href="{{ post.data.link_live }}" target="_blank" class="btn-ghost sm">Live ↗</a>
+				{% endif %}
+
+				{% if post.data.link_github %}
+				<a href="{{ post.data.link_github }}" target="_blank" class="btn-ghost sm">GitHub ↗</a>
+				{% endif %}
+
+				<a href="{{ post.url }}" class="btn-ghost sm">More →</a>
+
+			</div>
+
+		</div>
+
+		<p class="project-desc">{{ post.data.excerpt }}</p>
+
+		<div class="project-footer">
+
+			<div class="tags">
+				{% for category in post.data.categories %}
+					<span class="tag mono">{{ category }}</span>
+				{% endfor %}
+			</div>
+
+			<span class="project-year mono">{{ post.data.date | postDate }}</span>
+		
+		</div>
+
+	</div>
+
+</article>
+
+<div class="divider"></div>

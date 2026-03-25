@@ -2,26 +2,32 @@
 layout: "layouts/base.njk"
 ---
 
-{{ content | safe }}
-<section class="work">
-    <ul>
-        {%- for post in collections.work -%}
-            <li>
-                <a href="{{ post.url }}">
-                    <div class="col-image">
-                        <div class="image">
-                            <img src="images/work/{{ post.data.image }}" alt="{{ post.data.title }}"/>
-                        </div>
-                    </div>
-                    <div class="col-text">
-                        <header>
-                            <h3>{{ post.data.title }}</h3>
-                            <p class="date">{{ post.data.date | postDate }}</p>
-                        </header>
-                        <p class="excerpt">{{ post.data.excerpt }}</p>
-                    </div>
-                </a>
-            </li>
-        {%- endfor -%}
-    </ul>
+<section class="page-header">
+    
+	<div class="section-label"><span class="mono">01 /</span> Projects</div>
+    
+	<h1 class="page-title">Selected <em>Work</em></h1>
+    
+	<p class="page-subtitle">{{ subtitle }}</p>
+
+</section>
+
+<div class="divider"></div>
+
+<section class="projects-list">
+
+	{% set projectIndex = 0 %}
+
+    {% for post in collections.projects | reverse %}
+		
+		{% if post.data.public %}
+
+			{% set projectIndex = projectIndex + 1 %}
+
+			{% include 'partials/project.njk' %}
+			
+		{% endif %}
+		
+	{% endfor %}
+
 </section>

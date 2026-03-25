@@ -2,18 +2,62 @@
 layout: layouts/base.njk
 ---
 
-<div class="post">
-    <div class="wrap">
-        <img src="../../images/work/{{ image }}" alt="{{ title }}"/>
-        <h1 class="hug">{{ title }}</h1>
-        <div class="post-content">
-            {{ content | safe }}
-        </div>
-        <p class="post-date">Posted on {{ date | postDate }}</p>
-        <p class="hug categories">
-            {% for category in categories %}
-                <span>#{{ category }}</span>
-            {% endfor %}
-        </p>
-    </div>
-</div>
+<section class="page-header">
+    
+	<div class="section-label"><span class="mono">01 /</span> Project</div>
+    
+	<h1 class="page-title">{{ title }}</h1>
+    
+	<p class="page-subtitle">{{ excerpt }}</p>
+
+</section>
+
+<div class="divider"></div>
+
+<section class="project-content-section">
+
+	<div class="section-label"><span class="mono">02 /</span> Content</div>
+
+	<div class="project-content">
+
+		{{ content | safe }}
+
+	</div>
+
+	<div class="project-footer">
+
+		<div class="tags">
+			{% for category in categories %}
+				<span class="tag mono">{{ category }}</span>
+			{% endfor %}
+		</div>
+
+		<span class="project-year mono">{{ date | postDate }}</span>
+	
+	</div>
+
+</section>
+
+{% if gallery and gallery.length %}
+
+<div class="divider"></div>
+
+<section class="media-section">
+
+	<div class="section-label"><span class="mono">03 /</span> Media</div>
+
+	<div class="project-media">
+
+		{% for media in gallery %}
+		<figure class="media-item">
+			<a href="../../images/projects/{{ media.src or media }}" target="_blank" rel="noopener noreferrer">
+				<img src="../../images/projects/{{ media.src or media }}" alt="{{ media.alt or title }}" loading="lazy">
+			</a>
+		</figure>
+		{% endfor %}
+
+	</div>
+
+</section>
+
+{% endif %}

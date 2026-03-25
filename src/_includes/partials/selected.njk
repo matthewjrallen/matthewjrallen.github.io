@@ -1,6 +1,6 @@
-<a href="{{ post.url }}" class="project-item">
+<a href="{{ post.url }}" class="selected-item">
 
-    <div class="project-meta">
+    <div class="selected-meta">
 
         <span class="mono tag">
 			{% for category in post.data.categories %}
@@ -8,7 +8,7 @@
 			{% endfor %}
 		</span>
 
-        <span class="project-year">{{ post.data.date | postDate }}</span>
+        <span class="selected-year">{{ post.data.date | postDate }}</span>
 
     </div>
 

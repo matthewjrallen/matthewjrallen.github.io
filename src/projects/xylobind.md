@@ -5,7 +5,8 @@ categories:
   - wordpress
   - seo
 public: True
-icon: 🎈
+featured: True
 excerpt: Help setting up new Wordpress website including content generation and SEO.
-image: xylobind/main.jpg
+link_live: https://xylobind.com/
+link_github: False
 ---
