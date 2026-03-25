@@ -30,16 +30,75 @@ layout: "layouts/base.njk"
 
 <div class="divider"></div>
 
-<ul id="entries">
+<section class="skills-section">
 
-	{% for post in collections.posts | reverse %}
-		
-		{% if post.data.public %}
-			
-			{% include 'partials/entry.njk' %}
-			
-		{% endif %}
-		
-	{% endfor %}
+	<div class="section-label"><span class="mono">02 /</span> Expertise</div>
 
-</ul>
+	<div class="skills-grid">
+
+		<div class="skill-block">
+
+			<h3>Frontend</h3>
+
+			<ul>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>Javascript</li>
+				<li>On-page SEO</li>
+				<li>Performance Optimization</li>
+			</ul>
+
+		</div>
+
+		<div class="skill-block">
+
+			<h3>Backend</h3>
+
+			<ul>
+				<li>PHP</li>
+				<li>MYSQL</li>
+				<li>Wordpress</li>
+				<li>Woocommerce</li>
+			</ul>
+
+		</div>
+
+		<div class="skill-block">
+
+			<h3>Tooling</h3>
+
+			<ul>
+				<li>Git & GitHub</li>
+				<li>Figma</li>
+				<li>Adobe Creative Suite</li>
+				<li>VS Code</li>
+				<li>Terminal</li>
+			</ul>
+
+		</div>
+
+	</div>
+
+</section>
+
+<div class="divider"></div>
+
+<section class="projects-section">
+
+    <div class="section-label"><span class="mono">03 /</span> Selected Projects</div>
+
+    <div class="projects-grid">
+
+		{% for post in collections.projects | reverse %}
+			
+			{% if post.data.public %}
+				
+				{% include 'partials/entry.njk' %}
+				
+			{% endif %}
+			
+		{% endfor %}
+
+	</div>
+
+</section>

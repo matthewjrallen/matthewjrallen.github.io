@@ -28,6 +28,14 @@
 			display: flex;
 			gap: 36px;
 
+			li.current a {
+				color: var(--text);
+
+				&::after {
+					right: 0;
+				}
+			}
+
 			a {
 				font-family: var(--font-mono);
 				font-size: 0.78rem;

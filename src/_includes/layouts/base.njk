@@ -45,13 +45,15 @@
 
 				<ul>
 
-					<li><a href="/about.html" title="About">About</a></li>
+                    <li {% if page.url == '/' %} class="current"{% endif %}><a href="/" title="Home"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a></li>
+					
+                    <li {% if page.url == '/about.html' %} class="current"{% endif %}><a href="/about.html" title="About"{% if page.url == '/about.html' %} aria-current="page"{% endif %}>About</a></li>
 
-					<li><a href="/projects.html" title="My Projects">Projects</a></li>
+                    <li {% if page.url == '/projects.html' %} class="current"{% endif %}><a href="/projects.html" title="My Projects"{% if page.url == '/projects.html' %} aria-current="page"{% endif %}>Projects</a></li>
 
-					<li><a href="/uses.html" title="My Web Development Setup">Uses</a></li>
+                    <li {% if page.url == '/uses.html' %} class="current"{% endif %}><a href="/uses.html" title="My Web Development Setup"{% if page.url == '/uses.html' %} aria-current="page"{% endif %}>Uses</a></li>
 
-					<li><a href="/contact.html" title="Contact" class="btn">Contact</a></li>
+                    <li {% if page.url == '/contact.html' %} class="current"{% endif %}><a href="/contact.html" title="Contact" class="btn"{% if page.url == '/contact.html' %} aria-current="page"{% endif %}>Contact</a></li>
 
 				</ul>
 
