@@ -1,7 +1,24 @@
-// Theme persistence across pages
+// Auto-detect system theme unless user has explicitly chosen one.
 (function () {
-	const saved = localStorage.getItem("theme") || "light";
-	document.documentElement.setAttribute("data-theme", saved);
+	const html = document.documentElement;
+	const storedTheme = localStorage.getItem("theme");
+	const media = window.matchMedia("(prefers-color-scheme: dark)");
+
+	function getSystemTheme() {
+		return media.matches ? "dark" : "light";
+	}
+
+	function applyTheme(theme) {
+		html.setAttribute("data-theme", theme);
+	}
+
+	applyTheme(storedTheme || getSystemTheme());
+
+	media.addEventListener("change", function () {
+		if (!localStorage.getItem("theme")) {
+			applyTheme(getSystemTheme());
+		}
+	});
 })();
 
 function toggleTheme() {
