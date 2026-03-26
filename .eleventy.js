@@ -30,6 +30,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("./src/js/");
 	eleventyConfig.addPassthroughCopy("./src/images/");
 	eleventyConfig.addPassthroughCopy("./src/favicons/");
+	eleventyConfig.addPassthroughCopy("CNAME");
 
 	return {
 		dir: {
