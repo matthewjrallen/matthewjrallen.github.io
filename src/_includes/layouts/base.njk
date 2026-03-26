@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
     <head>
         <!-- Google Tag Manager -->
         <script>
@@ -41,9 +41,15 @@
 
 			<a href="/" class="nav-logo" title="Home">MA</a>
 
+            <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav-list">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
 			<nav class="main-nav">
 
-				<ul>
+                <ul id="main-nav-list">
 
                     <li {% if page.url == '/' %} class="current"{% endif %}><a href="/" title="Home"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a></li>
 					
