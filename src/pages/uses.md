@@ -1,39 +1,37 @@
 ---
 title: My Web Development Setup | Matthew Allen
 permalink: uses.html
-date: 2023-01-26
+date: 2026-03-26
 layout: layouts/page.njk
 ---
 
 # My Web Development Setup
 
-The following is my personal web development setup as of June 2024.
+The following is my personal web development setup as of March 2026.
 
 ## 🖋️ Editor
 
 - [Visual Studio Code](https://code.visualstudio.com/) with [extensions](https://howivscode.com/matthewjrallen).
-- Theme: [Ayu Mirage](https://marketplace.visualstudio.com/items?itemName=teabyii.ayu)
+- Theme: [Aura Dracula Spirit (Soft)](https://marketplace.visualstudio.com/items?itemName=JoseMurilloc.aura-spirit-dracula)
 - Font: [Monaspace Neon](https://monaspace.githubnext.com/)
 
 ## 🖥️ Desktop Apps
 
-- Windows 11. Recently switched from Mac.
-- Chrome is my main web browser. Keep trying firefox but always come back to Chrome.
-- [Affinity Photo/Design/Publisher](https://affinity.serif.com/)
-- [Cyberduck](https://cyberduck.io/) for FTP
+- MacOS Tahoe
+- Chrome Web Browser
+- [Affinity](https://affinity.serif.com/)
+- [Transmit](https://panic.com/transmit/) for FTP
 - [TablePlus](https://tableplus.com/) for MYSQL
-- [Bitwarden](https://bitwarden.com/) for password management
-- [YouTube Music](https://music.youtube.com/)
+- [Hyper](https://hyper.is/) for Terminal
 
 ## 🌐 Web Apps & Services
 
 - [GitHub](https://github.com/) for code
-- [SVGOMG](https://jakearchibald.github.io/svgomg/) for optimising SVGs
+- [Gemini](https://gemini.google.com/) for general AI
+- [Claude](https://claude.ai/) for more specific AI
 
 ## 📱 Hardware
 
-- ASUS ZenBook 14 Laptop, Intel Core Ultra 9 Processor, 32GB RAM, 1TB SSD
-- Google Pixel 8 Pro
-- Samsung Galaxy Tab S9
-- Sony WF-1000XM4
-- Sony WH-1000XM4
+- Macbook Air M4
+- iPhone 16 Pro Max
+- iPad Pro M4

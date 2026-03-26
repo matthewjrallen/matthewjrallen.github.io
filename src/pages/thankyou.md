@@ -5,4 +5,4 @@ date: 2026-03-25
 layout: layouts/page.njk
 ---
 
-# Thank you for your message
+I will reply to you as soon as I can.
