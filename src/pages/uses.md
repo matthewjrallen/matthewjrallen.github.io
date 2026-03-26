@@ -1,5 +1,5 @@
 ---
-title: My Web Development Setup | Matthew Allen
+title: My Web Development Setup
 permalink: uses.html
 date: 2026-03-26
 layout: layouts/page.njk

@@ -10,17 +10,17 @@ featured: True
 excerpt: Responsive website built for a local cake shop in Oxford. It features a MYSQL articles section and new online Ecwid shop.
 link_live: https://happy-cakes.co.uk
 link_github: False
-gallery:
-  - src: happy-cakes/a.png
-    alt: Happy Cakes homepage
-  - src: happy-cakes/a.png
-    alt: Product grid page
-  - src: happy-cakes/a.png
-    alt: Checkout journey
-  - src: happy-cakes/a.png
-    alt: Checkout journey
-  - src: happy-cakes/a.png
-    alt: Checkout journey
+# gallery:
+#   - src: happy-cakes/a.png
+#     alt: Happy Cakes homepage
+#   - src: happy-cakes/a.png
+#     alt: Product grid page
+#   - src: happy-cakes/a.png
+#     alt: Checkout journey
+#   - src: happy-cakes/a.png
+#     alt: Checkout journey
+#   - src: happy-cakes/a.png
+#     alt: Checkout journey
 ---
 
 The Happy Cakes website is a bespoke digital platform designed to provide a seamless e-commerce experience for one of the most celebrated bakeries in Oxford. The development focused on creating a high-performance, responsive interface that translates the artisanal quality of the brand into a digital space. By implementing a clean and intuitive user journey, the site ensures that customers can easily navigate through various product categories, including gourmet cupcakes, brownies, and celebratory big cakes.
