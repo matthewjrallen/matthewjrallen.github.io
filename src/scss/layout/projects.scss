@@ -8,6 +8,11 @@
 		padding: 8px 0;
 		animation: fadeUp 0.5s ease both;
 
+		@include media(820px) {
+			grid-template-columns: 40px 1fr;
+			gap: 16px;
+		}
+
 		.project-index {
 			font-size: 0.75rem;
 			color: var(--text-muted);
@@ -24,6 +29,11 @@
 				align-items: flex-start;
 				margin-bottom: 14px;
 				gap: 20px;
+
+				@include media(820px) {
+					flex-direction: column;
+					gap: 12px;
+				}
 
 				h2 {
 					font-family: var(--font-serif);

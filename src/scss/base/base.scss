@@ -34,6 +34,10 @@ main {
 	margin: 0 auto;
 	padding: 80px 40px 80px;
 	width: 100%;
+
+	@include media(820px) {
+		padding: 48px 24px 64px;
+	}
 }
 
 a {

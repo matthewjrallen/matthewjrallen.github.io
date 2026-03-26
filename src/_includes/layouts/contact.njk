@@ -2,26 +2,74 @@
 layout: "layouts/base.njk"
 ---
 
-<h1 class="hug">{{ title }}</h1>
+<section class="page-header">
+    
+	<div class="section-label"><span class="mono">01 /</span> Contact</div>
+    
+	<h1 class="page-title">Let's <em>Talk</em></h1>
+    
+	<p class="page-subtitle">Open to new projects, collaborations, and conversations.</p>
 
-{{ content | safe }}
+</section>
 
-<form action="https://api.staticforms.dev/submit" method="POST">
-    <!-- Your API Key (replace with your actual key) -->
-    <input type="hidden" name="apiKey" value="sf_93964dbe69c05a023151084b">
+<div class="divider"></div>
 
-	<input type="text" name="honeypot" style="display:none">
-	<input type="hidden" name="redirectTo" value="https://matthewallen.me/thank-you">
-    
-    <!-- Form fields -->
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
-    
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-    
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" required></textarea>
-    
-    <button type="submit">Send Message</button>
-  </form>
+<section class="contact-section">
+
+	<div class="contact-left">
+
+		<div class="contact-intro">{{ content | safe }}</div>
+
+		<div class="contact-details">
+
+			<div class="contact-item">
+			<span class="mono contact-label">GitHub</span>
+			<a href="https://github.com/matthewjrallen" target="_blank">github.com/matthewjrallen</a>
+			</div>
+
+			<div class="contact-item">
+			<span class="mono contact-label">LinkedIn</span>
+			<a href="https://linkedin.com/in/matthewjrallen" target="_blank">linkedin.com/in/matthewjrallen</a>
+			</div>
+
+			<div class="contact-item">
+			<span class="mono contact-label">Based in</span>
+			<span>Oxford, UK</span>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="contact-right">
+
+		<form action="https://api.staticforms.dev/submit" method="POST" class="contact-form">
+
+			<input type="hidden" name="apiKey" value="sf_93964dbe69c05a023151084b">
+			<input type="text" name="honeypot" style="display:none">
+			<input type="hidden" name="redirectTo" value="https://matthewallen.me/thank-you">
+			
+			<div class="form-group">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required>
+			</div>
+			
+			<div class="form-group">
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+			</div>
+			
+			<div class="form-group">
+				<label for="message">Message:</label>
+				<textarea id="message" name="message" required></textarea>
+			</div>
+
+			<div class="g-recaptcha" data-sitekey="6LcD2pgsAAAAAMyP6EliqncRpMXurpXy_MlFphOI"></div>
+			
+			<button class="btn-primary full-width" type="submit">Send Message</button>
+			
+		</form>
+		
+	</div>
+
+</section>

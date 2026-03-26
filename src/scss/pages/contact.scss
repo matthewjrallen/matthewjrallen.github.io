@@ -1,0 +1,97 @@
+.contact-section {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 80px;
+	animation: fadeUp 0.6s 0.1s ease both;
+
+	@include media(820px) {
+		grid-template-columns: 1fr;
+		gap: 48px;
+	}
+
+	.contact-intro {
+		color: var(--text-muted);
+		font-size: 1rem;
+		line-height: 1.75;
+		margin-bottom: 48px;
+	}
+
+	.contact-details {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+
+		.contact-item {
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+
+			a,
+			span {
+				font-size: 0.95rem;
+				color: var(--text);
+				transition: color var(--transition);
+			}
+
+			a {
+				&:hover {
+					color: var(--accent);
+				}
+			}
+
+			.contact-label {
+				font-size: 0.72rem;
+				color: var(--text-muted);
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+
+	.form-group {
+		display: flex;
+		flex-direction: column;
+		gap: 7px;
+
+		label {
+			font-size: 0.72rem;
+			color: var(--text-muted);
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+		}
+
+		input,
+		textarea {
+			background: var(--bg-alt);
+			border: 1px solid var(--border);
+			border-radius: var(--radius);
+			color: var(--text);
+			font-family: var(--font-sans);
+			font-size: 0.95rem;
+			padding: 12px 16px;
+			outline: none;
+			transition:
+				border-color var(--transition),
+				background var(--transition);
+			resize: vertical;
+
+			&::placeholder,
+			&::placeholder {
+				color: var(--text-muted);
+				opacity: 0.7;
+			}
+
+			&:focus,
+			&:focus {
+				border-color: var(--accent);
+				background: var(--surface);
+			}
+		}
+	}
+}

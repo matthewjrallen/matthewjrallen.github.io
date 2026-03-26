@@ -10,6 +10,10 @@
 	font-size: 0.78rem;
 	color: var(--text-muted);
 
+	@include media(820px) {
+		padding: 20px 24px;
+	}
+
 	.footer-links {
 		display: flex;
 		gap: 24px;

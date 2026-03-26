@@ -6,6 +6,10 @@
 		grid-template-columns: repeat(3, 1fr);
 		gap: 2px;
 
+		@include media(820px) {
+			grid-template-columns: 1fr;
+		}
+
 		.selected-item {
 			display: block;
 			padding: 28px 24px;

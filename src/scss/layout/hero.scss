@@ -6,6 +6,11 @@
 	padding-top: 20px;
 	animation: fadeUp 0.6s ease both;
 
+	@include media(820px) {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
+	}
+
 	.section-label {
 		grid-column: 1;
 		grid-row: 1;
@@ -37,6 +42,12 @@
 		justify-content: flex-end;
 		padding-bottom: 8px;
 		animation: fadeUp 0.6s 0.15s ease both;
+
+		@include media(820px) {
+			grid-column: 1;
+			grid-row: 3;
+			padding-top: 32px;
+		}
 
 		.hero-desc {
 			font-size: 1.05rem;

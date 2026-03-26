@@ -14,6 +14,10 @@
 		background var(--transition-slow),
 		border-color var(--transition-slow);
 
+	@include media(820px) {
+		padding: 0 24px;
+	}
+
 	.nav-logo {
 		font-family: var(--font-serif);
 		font-size: 1.2rem;
@@ -27,6 +31,10 @@
 			list-style: none;
 			display: flex;
 			gap: 36px;
+
+			@include media(520px) {
+				gap: 20px;
+			}
 
 			li.current a {
 				color: var(--text);
