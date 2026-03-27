@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-		<!-- Google Tag Manager -->
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-KN569MF');</script>
-		<!-- End Google Tag Manager -->
+		<script>
+			window.GTM_ID = 'GTM-KN569MF';
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			window.gtag = window.gtag || gtag;
+			window.gtag('consent', 'default', {
+				ad_storage: 'denied',
+				analytics_storage: 'denied',
+				ad_user_data: 'denied',
+				ad_personalization: 'denied',
+				wait_for_update: 500
+			});
+		</script>
 
         <title>Happy Cakes</title>
         <meta charset="UTF-8">
@@ -35,11 +41,6 @@
         </script>
     </head>
     <body>
-
-        <!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KN569MF"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-		<!-- End Google Tag Manager (noscript) -->
 
         <header class="header">
 
@@ -140,9 +141,21 @@
 
 				<a href="https://www.linkedin.com/in/matthewjrallen" target="_blank">LinkedIn</a>
 
+				<a href="#" id="cookie-settings">Cookie Settings</a>
+
 			</div>
 			
 		</footer>
+
+		<section class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie preferences">
+			<p>
+				This site uses cookies to run Google Analytics 4 and Google Tag Manager only when you allow analytics cookies.
+			</p>
+			<div class="cookie-banner-actions">
+				<button type="button" class="btn-ghost sm" id="cookie-reject">Reject</button>
+				<button type="button" class="btn-primary" id="cookie-accept">Allow Analytics</button>
+			</div>
+		</section>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
