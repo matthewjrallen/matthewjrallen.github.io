@@ -31,16 +31,17 @@
 		<link rel="manifest" href="/favicons/site.webmanifest" />
 
 		<link rel="me" href="https://mastodon.social/@matthewallen">Mastodon</link>
+		<meta name="fediverse:creator" content="@matthewallen@mastodon.social">
 
-        <script>
-            (function () {
-                const html = document.documentElement;
-                const stored = localStorage.getItem('theme');
-                const media = window.matchMedia('(prefers-color-scheme: dark)');
-                const theme = stored || (media.matches ? 'dark' : 'light');
-                html.setAttribute('data-theme', theme);
-            })();
-        </script>
+		<script>
+				(function () {
+						const html = document.documentElement;
+						const stored = localStorage.getItem('theme');
+						const media = window.matchMedia('(prefers-color-scheme: dark)');
+						const theme = stored || (media.matches ? 'dark' : 'light');
+						html.setAttribute('data-theme', theme);
+				})();
+		</script>
     </head>
     <body>
 
